@@ -1,0 +1,63 @@
+{
+  "name": "@pulspeed/mcp-server",
+  "version": "1.1.0",
+  "description": "MCP server for Pulspeed — website performance monitoring via PageSpeed Insights and AI analysis. Works with Claude, Cursor, Windsurf, and any MCP-compatible AI agent.",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "bin": {
+    "pulspeed-mcp": "dist/bin/pulspeed-mcp.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/bin/pulspeed-mcp.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pulspeed",
+    "pagespeed",
+    "lighthouse",
+    "performance",
+    "monitoring",
+    "core-web-vitals",
+    "web-vitals",
+    "ai-agent",
+    "claude",
+    "cursor",
+    "windsurf",
+    "mcp-server"
+  ],
+  "author": {
+    "name": "Pulspeed",
+    "url": "https://pulspeed.ai"
+  },
+  "license": "MIT",
+  "homepage": "https://pulspeed.ai/docs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pulspeed/mcp-server"
+  },
+  "bugs": {
+    "url": "https://github.com/pulspeed/mcp-server/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -47,6 +47,34 @@ export interface SiteDetails {
   };
   analysis: string | null;
   webhook_events: string[];
+  seo: SeoAudit | null;
+}
+
+export interface SeoIssue {
+  severity: "critical" | "warning" | "info";
+  message: string;
+  detail?: string;
+}
+
+export interface SeoCheckResult {
+  status: "pass" | "warn" | "fail" | "error";
+  score: number;
+  issues: SeoIssue[];
+  data: Record<string, unknown>;
+  error?: string;
+}
+
+export interface SeoAudit {
+  id: number;
+  site_id: number;
+  overall_score: number;
+  total_checks: number;
+  passed: number;
+  warnings: number;
+  failed: number;
+  results: Record<string, SeoCheckResult>;
+  source: "auto" | "manual";
+  audited_at: string;
 }
 
 export interface ScanJob {

@@ -47,6 +47,10 @@ import {
   getRawAuditDefinition,
   handleGetRawAudit,
 } from "./tools/get-raw-audit.js";
+import {
+  getSeoAuditDefinition,
+  handleGetSeoAudit,
+} from "./tools/get-seo-audit.js";
 
 const TOOL_DEFINITIONS = [
   // Core
@@ -61,6 +65,7 @@ const TOOL_DEFINITIONS = [
   bulkScanDefinition,
   listRegressionsDefinition,
   getRawAuditDefinition,
+  getSeoAuditDefinition,
 ];
 
 export async function main(): Promise<void> {
@@ -113,6 +118,9 @@ export async function main(): Promise<void> {
           break;
         case "get_raw_audit":
           result = await handleGetRawAudit(apiClient, toolArgs);
+          break;
+        case "get_seo_audit":
+          result = await handleGetSeoAudit(apiClient, toolArgs);
           break;
         default:
           return {

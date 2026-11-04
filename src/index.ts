@@ -73,7 +73,7 @@ export async function main(): Promise<void> {
   const apiClient = new PulspeedApiClient(config);
 
   const server = new Server(
-    { name: "pulspeed", version: "1.1.0" },
+    { name: "pulspeed", version: "1.2.0" },
     { capabilities: { tools: {} } },
   );
 

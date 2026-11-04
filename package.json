@@ -1,6 +1,6 @@
 {
   "name": "@pulspeed/mcp-server",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "MCP server for Pulspeed — website performance monitoring via PageSpeed Insights and AI analysis. Works with Claude, Cursor, Windsurf, and any MCP-compatible AI agent.",
   "type": "module",
   "main": "dist/src/index.js",

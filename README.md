@@ -2,7 +2,7 @@
 
 **Website performance monitoring for AI agents.**
 
-[Pulspeed](https://pulspeed.ai) MCP server exposes 10 tools for scanning sites, reading Core Web Vitals, detecting regressions, and getting AI-powered recommendations — all callable by Claude, Cursor, Windsurf, and any MCP-compatible agent.
+[Pulspeed](https://pulspeed.ai) MCP server exposes 11 tools for scanning sites, reading Core Web Vitals, detecting regressions, and getting AI-powered recommendations — all callable by Claude, Cursor, Windsurf, and any MCP-compatible agent.
 
 [![npm version](https://img.shields.io/npm/v/@pulspeed/mcp-server)](https://www.npmjs.com/package/@pulspeed/mcp-server)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -168,6 +168,14 @@ Full Lighthouse audit data for a specific audit key — detailed resource-level 
 | `audit_key` | string | ✓ | Lighthouse audit key |
 
 Common audit keys: `render-blocking-resources`, `bootup-time`, `unused-javascript`, `uses-optimized-images`, `network-requests`, `uses-text-compression`.
+
+### `get_seo_audit`
+
+Latest technical SEO audit from [CrawlRay](https://crawlray.com): overall score and per-check status with issues. Audits run automatically after performance scans on paid plans.
+
+| Param | Type | Required | Description |
+|-------|------|----------|-------------|
+| `url` / `site_id` | — | ✓ | Site identifier |
 
 ---
 
